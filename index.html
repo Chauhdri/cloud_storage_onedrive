@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+
+<head>
+    <style>
+        body {
+            background-image: url('images/1.jpg');
+            background-size: cover;
+            display: grid;
+            grid-template-columns: 10% 80% 10%;
+            justify-content: start;
+            padding: 0;
+            margin: 0;
+margin-bottom:4em;
+	font-size:1.5em;
+	font-family:"Arial";
+
+        }
+
+        body>header {
+            grid-area: 1/1/2/4;
+            background-image: linear-gradient(to bottom, rgb(1, 167, 117), rgba(225, 231, 231, 0.774));
+            height: min-content;
+            padding: 0;
+            margin: 0;
+            box-shadow: 2px 2px 2px 2px rgba(37, 37, 37, 0.25);
+        }
+
+        body>header>img {
+            width: auto;
+            height: 4em;
+            float: left;
+            clear: right;
+            padding: 0;
+            margin: 0;
+            margin-left: 1em;
+        }
+
+        body>header>h1 {
+            grid-area: 1/2/4/4;
+            margin: auto;
+            margin-left: 3em;
+            padding: 0.4em;
+            font-family: serif;
+            color: rgb(42, 43, 43);
+
+
+        }
+
+        body>nav {
+            grid-area: 2/1/3/2;
+            margin: 0;
+            padding-top: 14em;
+            padding-bottom: 14em;
+        }
+
+        body>nav>ul {
+            list-style: none;
+            display: flex;
+            grid-template-columns: auto auto auto;
+            height: 100%;
+            width: 3.75em;
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: 2em;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            background-color: rgba(9, 199, 158, 0.9);
+            border-radius: 0% 5% 5% 0%;
+            box-shadow: 2px 2px 2px 2px rgba(37, 37, 37, 0.25);
+        }
+
+        body>nav>ul>li {
+            grid-area: auto;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        body>nav>ul>li>a>img {
+            height: 2em;
+            width: auto;
+            margin: 0.75em;
+            padding: 0;
+        }
+
+        body>section {
+            grid-area: 2/2/4/3;
+            margin: 1em;
+            margin-bottom: 4em;
+            background-color: rgba(216, 216, 216, 0.781);
+            box-shadow: 3px 3px 3px 3px rgba(37, 37, 37, 1);
+            height: 40em;
+            width: auto;
+            text-align: center;
+            overflow-Y: scroll;
+            overflow-X: hidden;
+        }
+
+        body>section>header {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 25px;
+            text-align: start;
+        }
+
+        body>section>article {
+            text-align: start;
+            padding: 1em;
+	    margin-bottom:1em;
+
+        }
+
+        .Buttons {
+	      height: 3em;
+            width: 6.5em;
+            border: 0 solid;
+            padding: 0%;
+            margin: 1%;
+            background-color: rgb(22, 189, 16);
+            font-family: 'Times New Roman', Times, serif;
+            font-size: large;
+            font-weight: normal;
+            color: rgb(241, 227, 227);
+        }
+
+       .fButton {
+	
+            text-align: center;
+            grid-area: 3/2/4/3;
+            padding: 0;
+            width: 100%;
+}
+        .Buttons:hover {
+            background-color: seagreen;
+        }
+
+        .articleDisplay {
+            display: none
+        }
+
+        #pageF {
+            position: fixed;
+            bottom: 0%;
+            width: 100%;
+            height: 2em;
+            line-height: 2em;
+            display: inline-block;
+            padding: 0;
+            padding-left: 1em;
+            margin: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            font-family: cursive;
+            color: rgb(255, 255, 255);
+        }
+    </style>
+</head>
+
+<body onload="structure(n=0)">
+    <header>
+        <img src="ababeel-logo.png" alt="logo" />
+        <h1>
+            ABABEEL
+        </h1>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="https://www.facebook.com/ababeel.edu"><img src="icons/facebook.png" alt="Facebook" /></a>
+            </li>
+            <li>
+                <a><img src="icons/webpage.png" /></a>
+            </li>
+            <li>
+                <a><img src="icons/icons8-why-quest-100.png" alt="Help" /></a>
+            </li>
+        </ul>
+
+
+    </nav>
+    <section id="mediaFrame">
+        <header id="sHeader"  style="padding:0.25em; font-size:4em; color:blue; text-align:center">
+            OneDrive - Cloud Storage
+        </header>
+                   <article id="0" >
+
+                <h1 id="header"></h1>
+                <p id="descript"></p>
+                <br />
+                <p>
+                    <strong >Title</strong> &emsp;&emsp;&emsp;<i id="Title"></i><br />
+                    <strong >Duration</strong> &emsp;<i id="Duration"></i><br />
+                    <strong >Level</strong> &emsp;&emsp;&ensp;<i id="Level"></i><br />
+                    <strong >Cost</strong> &emsp;&emsp;&emsp;<i id="Cost"></i>Rs.<br />
+                </p>
+                <p>
+                    <strong>Note:</strong>&emsp;<u>This course will save your progress, make sure you complete
+                        this in one through.</u>
+                </p>
+            </article>
+            <article id="1" class="articleDisplay">
+
+                <h1 >Cloud Storage</h1>
+                <p >Cloud storage is online storage provided by company for users to store their data and access it with from anywhere in the world with internet access. </p>
+                <br />
+                <p >
+                    <strong >Features</strong>
+                <ul>
+                    <li >Provides online storage</li>
+                    <li >Free-up device storage</li>
+                    <li >Shareable folders and files</li>
+                    <li >Secure and 24/7 availability</li>
+                </ul>
+                <i >Top cloud-storage services and their provider.</i>
+                <ul>
+                    <li >OneDrive – Microsoft </li>
+                    <li >Google Drive – Google</li>
+                    <li >Dropbox – Dropbox, Inc</li>
+                </ul>
+
+                </p>
+               
+            </article>
+
+
+            <article id="2" class="articleDisplay">
+
+                <h1 >OneDrive Introduction</h1>
+               
+<video class="video" height="560px" width="70%" style="margin:2em; margin-top:0em; margin-left:5em" controls>                     
+                    		<source src="videos/introduction.mp4" id="s2Src" />
+               
+                </video>
+            </article>
+
+
+            <article id="3" class="articleDisplay">
+
+                <h1 >OneDrive PC or Laptop Setup</h1>
+                              
+<video class="video" height="560px" width="70%" style="margin:2em; margin-top:0em; margin-left:5em" controls>
+                    		<source src="videos/OneDrive PC setup.mp4" id="s2Src" />
+                </video>
+
+                <p>Where to find OneDrive icon in windows.</p>
+<img src="images/PC.png" style="float:right; padding-bottom:2em" alt="onedrive icon location; at right bottom of screen" />
+		 
+            </article>
+
+
+            <article id="4" class="articleDisplay">
+
+                <h1 >OneDrive is also available on Phone</h1>
+                	<ol>
+			<li>Android</li>
+			<li>Iphone</li>
+			</ol>
+
+		<h4 >Android setup</h4>
+                
+                	<video class="video" height="560px" width="70%" style="margin:2em; margin-top:0em; margin-left:5em" controls>
+                    		<source src="videos/android setup.mp4" id="s2Src" />
+               
+                </video>
+		<h4 >Iphone setup</h4>
+                
+                	<video class="video" height="560px" width="70%" style="margin:2em; margin-top:0em; margin-left:5em" controls>
+                    		<source src="videos/iphone setup.mp4" id="s2Src" />
+               
+                </video>
+               </article>
+
+            <article id="5" class="articleDisplay">
+
+                <h1 >OneDrive Basic use (Online-Web)</h1>
+                
+                <video class="video" height="560px" width="70%" style="margin:2em; margin-top:0em; margin-left:5em" controls>
+                    <source src="videos/basic.mp4" id="s2Src" />
+               
+                </video>
+            </article>
+             <article id="6" class="articleDisplay">
+
+                <h1 >OneDrive Basic use (Apps)</h1>
+                
+                <video class="video" height="560px" width="70%" style="margin:2em; margin-top:0em; margin-left:5em" controls>
+                    <source src="videos/app basic.mp4" id="s2Src" />
+               
+                </video>
+            </article>
+            <article id="7" class="articleDisplay">
+
+                <h1 >OneDrive Files or Folders Sharing with in ENGRO</h1>
+                
+                <video class="video" height="560px" width="70%" style="margin:2em; margin-top:0em; margin-left:5em" controls>
+                    <source src="videos/Files Share.mp4" id="s2Src" />
+               
+                </video>
+            </article>
+
+
+            <article id="8" class="articleDisplay">
+
+                <h1 >Keep files offline available or free up space to remove them.</h1>
+                
+                <video class="video" height="560px" width="70%" style="margin:2em; margin-top:0em; margin-left:5em" controls>
+                    <source src="videos/Keep File offline.mp4" id="s2Src" />
+               
+                </video>
+            </article>
+
+
+            <article id="9" class="articleDisplay">
+
+                <h1 id="header">Icons to remember</h1>
+                <p id="descript">Following are icons you must know.</p>
+                <br />
+                <ol >
+                    <li> <h4>OneDrive</h4> <br/>
+			<img src="OneDrive Icons/1.png" height="120px" width="240px" style="margin:1em; clear:right"/>
+			<br/>
+			<span>If you have signed in to the OneDrive sync app with both work or school and a personal account, you will see two OneDrive sync icons.</span>
+                    	<br/>
+			<span> The blue one is for your work or school account, the white one is for your personal account.</span>
+		    </li>
+		    <li> <h4>OneDrive Paused</h4> <br/>
+			<img src="OneDrive Icons/2.png" height="120px"  width="140px" style="margin:1em; clear:right"/>
+			<img src="OneDrive Icons/3.png" height="120px"  width="140px" style="margin:1em; clear:right"/>
+			<br/>
+			<span>The paused symbol over the OneDrive or OneDrive for work or school icon means your files are not currently syncing.</span>
+                    	<br/>
+			<span> To resume syncing, select the relevant OneDrive icon in the notification or menu bar area, select More and then Resume syncing.</span>
+		    </li>
+		    <li> <h4>OneDrive Syncing</h4> <br/>
+			<img src="OneDrive Icons/4.png" height="120px" width="140px" style="margin:1em"/>
+			<img src="OneDrive Icons/5.png" height="120px" width="140px" style="margin:1em"/>
+			<img src="OneDrive Icons/6.png" height="120px" width="140px" style="margin:1em"/>
+			<br/>
+			<span>This includes when you are uploading files, or OneDrive is syncing new files from the cloud to your PC.</span>
+                    	<br/>
+			<span>OneDrive will also check for other file or folder changes and may show "Processing changes". If OneDrive shows “Processing changes" for a long time, it could be because you have an online file open, a very large file syncing, a lot of files stuck in a queue.</span>
+		    </li>
+		    <li> <h4>OneDrive Warning</h4> <br/>
+			<img src="OneDrive Icons/7.png" height="120px" width="140px" style="margin:1em"/>
+			<img src="OneDrive Icons/8.png" height="120px" width="140px" style="margin:1em"/>
+			<br/>
+			<span>If you see a yellow warning triangle over your OneDrive or OneDrive for work or school icon, it means your account needs attention. </span>
+                    	<br/>
+			<span>Select the icon to see the warning message displayed in the activity center.</span>
+		    </li>
+		    <li> <h4>Not Signed In</h4> <br/>
+			<img src="OneDrive Icons/9.png" height="120px" width="140px" style="margin:1em"/>
+			<br/>
+			<span>A grayed-out OneDrive icon with a line through it means you're not signed in, or OneDrive setup hasn't completed. </span>
+                    	<br/>
+			<span>Press the Windows key, search for OneDrive and then open the OneDrive desktop app.</span>
+		    </li>
+		    <li> <h4>Cannot Sync</h4> <br/>
+			<img src="OneDrive Icons/10.png" height="120px" width="140px" style="margin:1em"/>
+			<img src="OneDrive Icons/11.png" height="120px"  width="140px" style="margin:1em"/>
+			<img src="OneDrive Icons/12.png" height="120px" width="140px" style="margin:1em"/>
+			<br/>
+			<span> A red circle with a white cross means that a file or folder cannot be synced. You'll see this in File Explorer or on the OneDrive notification area icons.</span>
+                    	<br/>
+			<span> Click the blue or white OneDrive icon in the notification area to learn more about the problem. </span>
+		    </li>
+		    <li> <h4>Account Blocked</h4> <br/>
+			<img src="OneDrive Icons/13.png" height="120px" width="140px" style="margin:1em"/>
+			<br/>
+			<span>If you see a red "no entry" style icon over your OneDrive icon, it means your account is blocked.</span>
+                    	<br/>
+			<span> Learn more about what to do. </span>
+		    </li>
+		    <li> <h4>Files won't Sync</h4> <br/>
+			<img src="OneDrive Icons/14.png" height="120px" width="140px" style="margin:1em"/>
+			<br/>
+			<span>It means your admin has blocked the sync of certain file types. It's most common to block Outlook data files.</span>
+                    	<br/>
+			<span> Learn more about what to do. </span>
+		    </li>
+		    <li> <h4>People Icon</h4> <br/>
+			<img src="OneDrive Icons/15.png" height="120px" width="140px" style="margin:1em"/>
+			<br/>
+			<span>If you see a "people" icon next to your OneDrive files or folders, this indicates the file or folder has been shared with other people.</span>
+                    	<br/>
+			<span> Learn more about what to do. </span>
+		    </li>
+		    <li> <h4>Outlined OneDrive Icon</h4> <br/>
+			<img src="OneDrive Icons/16.png" height="120px" width="140px" style="margin:1em"/>
+			<br/>
+			<span>A blue cloud icon next to your OneDrive files or folders indicates that the file is only available online. Online-only files don’t take up space on your computer.</span>
+                    	<br/>
+			<span>You can’t open online-only files when your device isn’t connected to the Internet.</span>
+		    </li>
+		    <li> <h4>Outlined Green Tick</h4> <br/>
+			<img src="OneDrive Icons/17.png" height="120px"  width="140px" style="margin:1em"/>
+			<br/>
+			<span>When you open an online-only file, it downloads to your device and becomes a locally available file. You can open a locally available file anytime, even without Internet access. </span>
+                    	<br/>
+			<span>If you need more space, you can change the file back to online only. Just right-click the file and select “Free up space.” </span>
+		    </li>
+		    <li> <h4>Filled Green Tick</h4> <br/>
+			<img src="OneDrive Icons/18.png" height="120px" width="140px" style="margin:1em"/>
+			<br/>
+			<span>Files that you mark as "Always keep on this device" have the green circle with the white check mark.</span>
+                    	<br/>
+			<span>These always available files download to your device and take up space, but they’re always there for you even when you’re offline.</span>
+		    </li>
+		    
+		</ol>
+                <p >
+                    <strong >Note:</strong>&emsp;<u>This course will save your progress, make sure you complete
+                        this in one through.</u>
+                </p>
+                
+            </article>
+
+
+            <article id="10" class="articleDisplay" style="text-align:center">
+                <h1 id="header" style="padding:1.25em; font-size:4em; color:green">Congratulations</h1>
+                <p id="descript" style="font-family:arial; color:seagreen">You have completed OneDrive-Cloud Storage Training. Click button to close tab.</p>
+            <div style="text-align:center"> 
+<button id="finish" class="Buttons" onclick="window.close()"  >
+                CLOSE TAB
+            </button>
+</div>
+	</article>
+
+
+        
+        
+    </section>
+<div class="fButton">
+            <button id="moveBck" class="Buttons" onClick="slider(-1)">
+                BACK
+            </button>
+            <button id="moveFwd" class="Buttons" onclick="slider(1)">
+                NEXT
+            </button>
+	    
+
+        </div>
+
+    <script>
+
+        const courses = [
+            {
+                header: "Cloud Storage- OneDrive",
+                descript: "This is short course with video and pictures on Cloud Storage  OneDrive including small quiz in the end to conclude your progress. It will take less than 20mins to complete.",
+                Title: "Cloud Storage",
+                Duration: "15-20 min",
+                Cost: 0,
+                Level: "Beginner",
+                slides: 8,
+            }
+
+        ]
+
+        const slides = [
+            {
+                s1Header:"Cloud Storage- OneDrive",
+                s1Descript: "Cloud storage is online storage provided by company for users to store their data and access it with from anywhere in the world with internet access. ",
+                s11:"Provides online storage",
+                s12:"Free-up device storage",
+                s13:"Shareable folders and files",
+                s14:"Secure and 24/7 availability",
+                s15:"Top cloud-storage services and their provider.",
+                s16:"OneDrive - Microsoft ",
+                s17:"Google Drive - Google",
+                s18:"Dropbox - Dropbox, Inc",
+        },
+        {
+            s2Header: "OneDrive Introduction",
+            //s2Src: "https://www.microsoft.com/en-us/videoplayer/embed/RWebsp?pid=ocpVideo0-innerdiv-oneplayer&maskLevel=20&market=en-us"
+        }
+    ]
+
+
+
+        let vSlide = 0;
+        function structure() {
+		
+                if(vSlide!=10)(document.getElementById("finish").style.display = "none");
+            for (const key in courses[n]) {
+                const g = document.getElementById(key)
+                g.append(document.createTextNode(courses[n][key]))
+            }
+            for(m=0;m<slides.length;m++)
+            for (const key in slides[m]) {
+                const h = document.getElementById(key)
+                h.append(document.createTextNode(slides[m][key]))
+            }
+            
+        }
+        
+
+        function slider(cmd) {
+            console.log(vSlide);
+		
+                (document.getElementById(0).style.display = "none")
+            for (i = 1; i < 11; i++) 
+                (document.getElementById(i).style.display = "none")
+            
+            
+            if(cmd>0) vSlide++
+            else vSlide--
+        
+            if (vSlide == 10) {
+                (document.getElementById("moveBck").style.display = "none");
+                (document.getElementById("moveFwd").style.display = "none");
+		(document.getElementById("finish").style.display = "block");
+                (document.getElementById("sHeader").style.fontSize = "2em");
+                (document.getElementById("sHeader").style.color = "black");
+		
+}
+            if (vSlide<0)
+            (vSlide=0)
+            
+            document.getElementById(vSlide).style.display = "block";
+        
+
+
+        }
+
+
+
+
+        
+    </script>
+
+</body>
+<footer id="pageF">
+    @ MUHAMMAD TALHA KHALID
+</footer>
