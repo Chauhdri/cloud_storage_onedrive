@@ -52,7 +52,7 @@
         let vSlide = 0;
         function structure() {
 
-            if (vSlide != 10) (document.getElementById("finish").style.display = "none");
+            if (vSlide != 12) (document.getElementById("finish").style.display = "none");
             for (const key in courses[n]) {
                 const g = document.getElementById(key)
                 g.append(document.createTextNode(courses[n][key]))
@@ -70,14 +70,14 @@
             console.log(vSlide);
 
             (document.getElementById(0).style.display = "none")
-            for (i = 1; i < 11; i++)
+            for (i = 1; i < 13; i++)
                 (document.getElementById(i).style.display = "none")
 
 
             if (cmd > 0) vSlide++
             else vSlide--
 
-            if (vSlide == 10) {
+            if (vSlide == 12) {
                 (document.getElementById("moveBck").style.display = "none");
                 (document.getElementById("moveFwd").style.display = "none");
                 (document.getElementById("finish").style.display = "block");

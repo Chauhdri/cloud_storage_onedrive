@@ -38,7 +38,6 @@
     margin-bottom: 4em;
     font-size: 2vh;
     font-family: "Arial";
-    color:#ddd;
 
 }
 
@@ -52,6 +51,7 @@ body>header {
     margin: 0;
     box-shadow: 2px 2px 2px 2px rgba(37, 37, 37, 0.25);
     position: fixed;
+    z-index: 1;
 }
 
 body>header>img {
@@ -86,7 +86,7 @@ body>nav>ul {
     display: flex;
     /* grid-template-columns: auto auto auto; */
     height: 100%;
-    width: 3.75em;
+    width: 3.5em;
     flex-direction: column;
     align-items: flex-start;
     row-gap: 2em;
@@ -115,29 +115,41 @@ body>nav>ul>li>a>img {
 body>section {
     /* grid-area: 2/2/4/3; */
     
-    height: auto;
+    height: fit-content;
     width: auto;
     text-align: center;
-    overflow-Y: auto;
-    overflow-X:auto ;
     top:10%;
     left:10%;
     right:10%;
-    bottom: 20%;
-    position: fixed;
+    position: absolute;
+    padding-bottom: 10%;
 }
 
 body>section>header {
     padding: 1em;
-    /* text-align: start; */
+    width: fit-content;
+    position: relative;
+    margin-bottom: 5px;
+    text-align: start;
+    background-color: rgba(250, 250, 250, 0.8);
 }
 
 body>section>article {
     text-align: start;
     width: fit-content;
+    min-height: fit-content;
     padding: 1em;
     margin-bottom: 1em;
+    background-color: rgba(250, 250, 250, 0.7);
+    
+    position: relative;
+    overflow-Y: visible;
+    overflow-X:auto ;
 
+}
+
+body>section>article>video {
+    width: 100%;
 }
 
 .Buttons {
@@ -148,14 +160,14 @@ body>section>article {
     margin: 1%;
     background-color: rgb(22, 189, 16);
     color: rgb(241, 227, 227);
-    position: relative;
+    /* position: relative; */
 }
 
 .fButton {
 
     text-align: center;
-    bottom: 10%;
-    position: fixed;
+    /* bottom: 10%; */
+    position: relative;
     /* grid-area: 3/2/4/3; */
     padding: 0;
     width: 100%;
@@ -171,13 +183,13 @@ body>section>article {
     
 }
 
-#pageF {
+body>footer {
     position: fixed;
     bottom: 0%;
     width: 100%;
     height: 2em;
     line-height: 2em;
-    display: inline-block;
+    /* display: inline-block; */
     padding: 1em;
     padding-left: 1em;
     margin: 0;
@@ -185,8 +197,7 @@ body>section>article {
     font-family: cursive;
     color: rgb(255, 255, 255);
 }
-/* .content {
+.content {
     padding:4px;
-    background-color: rgba(16, 16, 16, 0.8);
-    box-shadow: 3px 3px 3px 3px rgba(37, 37, 37, 1);
-} */
+    /* box-shadow: 3px 3px 3px 3px rgba(37, 37, 37, 1); */
+}
