@@ -36,7 +36,7 @@
     padding: 0;
     margin: 0;
     margin-bottom: 4em;
-    font-size: 1.5vh;
+    font-size: 2vh;
     font-family: "Arial";
     color:#ddd;
 
@@ -68,7 +68,6 @@ body>header>h1 {
     margin: auto;
     margin-left: 3em;
     padding: 0.4em;
-    color: rgb(42, 43, 43);
 
 
 }
@@ -78,8 +77,8 @@ body>nav {
     margin: 0;
     padding-top: 14em;
     padding-bottom: 14em;
-    top:20%;
-    position: absolute;
+    top:10%;
+    position: fixed;
 }
 
 body>nav>ul {
@@ -116,28 +115,26 @@ body>nav>ul>li>a>img {
 body>section {
     /* grid-area: 2/2/4/3; */
     
-    background-color: rgba(16, 16, 16, 0.5);
-    box-shadow: 3px 3px 3px 3px rgba(37, 37, 37, 1);
     height: auto;
     width: auto;
     text-align: center;
-    overflow-Y: scroll;
-    overflow-X: hidden;
+    overflow-Y: auto;
+    overflow-X:auto ;
     top:10%;
     left:10%;
     right:10%;
-    bottom: 10%;
-    margin: 1em;
+    bottom: 20%;
     position: fixed;
 }
 
 body>section>header {
-    padding: 25px;
-    text-align: start;
+    padding: 1em;
+    /* text-align: start; */
 }
 
 body>section>article {
     text-align: start;
+    width: fit-content;
     padding: 1em;
     margin-bottom: 1em;
 
@@ -151,12 +148,13 @@ body>section>article {
     margin: 1%;
     background-color: rgb(22, 189, 16);
     color: rgb(241, 227, 227);
-    position: fixed;
+    position: relative;
 }
 
 .fButton {
 
     text-align: center;
+    bottom: 10%;
     position: fixed;
     /* grid-area: 3/2/4/3; */
     padding: 0;
@@ -169,7 +167,7 @@ body>section>article {
 
 .articleDisplay {
     display: none;
-    position: fixed;
+    /* position: fixed; */
     
 }
 
@@ -187,3 +185,8 @@ body>section>article {
     font-family: cursive;
     color: rgb(255, 255, 255);
 }
+/* .content {
+    padding:4px;
+    background-color: rgba(16, 16, 16, 0.8);
+    box-shadow: 3px 3px 3px 3px rgba(37, 37, 37, 1);
+} */
