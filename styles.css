@@ -29,22 +29,23 @@
     background-position-y: center;
     background-repeat: no-repeat;
     background-size: 10em 10em;
-    display: grid;
+    /* display: grid;
     grid-template-columns: 10% 80% 10%;
-    grid-template-rows: auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto; */
     justify-content: middle;
     padding: 0;
     margin: 0;
     margin-bottom: 4em;
     font-size: 1.5vh;
     font-family: "Arial";
+    color:#ddd;
 
 }
 
 
 body>header {
-    grid-area: 1/1/2/4;
-    background-image: linear-gradient(to bottom, rgb(1, 167, 117), rgba(225, 231, 231, 0.774));
+    /* grid-area: 1/1/2/4; */
+    background-image: linear-gradient(to top, #b06ab3, #4568dc );
     height: min-content;
     width:100%;
     padding: 0;
@@ -73,11 +74,12 @@ body>header>h1 {
 }
 
 body>nav {
-    grid-area: 2/1/2/2;
+    /* grid-area: 2/1/2/2; */
     margin: 0;
     padding-top: 14em;
     padding-bottom: 14em;
-    position: relative;
+    top:20%;
+    position: absolute;
 }
 
 body>nav>ul {
@@ -92,7 +94,7 @@ body>nav>ul {
     justify-content: center;
     margin: 0;
     padding: 0;
-    background-color: rgba(9, 199, 158, 0.9);
+    background-image: linear-gradient(to left,#b06ab3,#4568dc) ;
     border-radius: 0% 5% 5% 0%;
     box-shadow: 2px 2px 2px 2px rgba(37, 37, 37, 0.25);
 }
@@ -112,17 +114,21 @@ body>nav>ul>li>a>img {
 }
 
 body>section {
-    grid-area: 2/2/4/3;
-    margin: 1em;
-    margin-bottom: 4em;
-    background-color: rgba(216, 216, 216, 0.781);
+    /* grid-area: 2/2/4/3; */
+    
+    background-color: rgba(16, 16, 16, 0.5);
     box-shadow: 3px 3px 3px 3px rgba(37, 37, 37, 1);
-    height: 40em;
+    height: auto;
     width: auto;
     text-align: center;
     overflow-Y: scroll;
     overflow-X: hidden;
-    position: relative;
+    top:10%;
+    left:10%;
+    right:10%;
+    bottom: 10%;
+    margin: 1em;
+    position: fixed;
 }
 
 body>section>header {
@@ -152,7 +158,7 @@ body>section>article {
 
     text-align: center;
     position: fixed;
-    grid-area: 3/2/4/3;
+    /* grid-area: 3/2/4/3; */
     padding: 0;
     width: 100%;
 }
@@ -174,7 +180,7 @@ body>section>article {
     height: 2em;
     line-height: 2em;
     display: inline-block;
-    padding: 0;
+    padding: 1em;
     padding-left: 1em;
     margin: 0;
     background-color: rgba(0, 0, 0, 0.8);
