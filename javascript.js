@@ -18,7 +18,7 @@
         const courses = [
             {
                 header: "Cloud Storage- OneDrive",
-                descript: "This is short course with video and pictures on Cloud Storage  OneDrive including small quiz in the end to conclude your progress. It will take less than 20mins to complete.",
+                descript: "This is short course with video and pictures on Cloud Storage. It will take less than 20mins to complete.",
                 Title: "Cloud Storage",
                 Duration: "15-20 min",
                 Cost: 0,
