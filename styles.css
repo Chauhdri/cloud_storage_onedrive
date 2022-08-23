@@ -118,11 +118,11 @@ body>section {
     height: fit-content;
     width: auto;
     text-align: center;
-    top:10%;
-    left:10%;
-    right:10%;
+    top:5em;
+    left:4em;
+    right:4em;
     position: absolute;
-    padding-bottom: 10%;
+    padding-bottom: 7em;
 }
 
 body>section>header {
@@ -200,4 +200,10 @@ body>footer {
 .content {
     padding:4px;
     /* box-shadow: 3px 3px 3px 3px rgba(37, 37, 37, 1); */
+}
+body>section>article>ol>li>img {
+    height:80px;
+    width:auto;
+    margin:1em; 
+    clear:right;
 }
